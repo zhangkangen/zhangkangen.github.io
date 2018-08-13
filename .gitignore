@@ -1,4 +1,8 @@
+*Thumbs.db
+.bundle
+.sass-cache
+Gemfile.lock
 _site
-_site/
-.DS_Store
+*.gem
+*.bak
 .idea
