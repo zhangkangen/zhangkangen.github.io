@@ -28,8 +28,8 @@ defaults:
 paginate: 20
 
 #### Site
-title : Jekyll Jacman
-tagline: A fresh looking and responsive theme for Jekyll
+title : zhangkangen's blog
+tagline: 我的技术博客
 assets: /assets
 url:
 baseurl:
