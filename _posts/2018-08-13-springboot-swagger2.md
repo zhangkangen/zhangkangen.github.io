@@ -1,6 +1,6 @@
 ---
 layout: post
-title: springboot 开发项目中基层 swagger2
+title: springboot 开发项目中集成 swagger2
 date: 2018-08-13 19:33:20
 categories:
 - springboot
