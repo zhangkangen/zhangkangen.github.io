@@ -15,17 +15,18 @@ description: github + jekyll + markdown 搭建自己的博客页面
 
 ## 导入 jekyll 模板
 
-* 下载模板
+### 下载模板
     
     进入[jekyll 模板网页模板](http://jekyllthemes.org/)选择自己喜欢的模板下载.<br>
     我使用的模板: [jekyll-jacman](https://github.com/Simpleyyt/jekyll-jacman), 详细的配置可以点击链接查看.<br>
     将下载的模板解压后的文件放到项目库中.
     
-* 配置<br>
+### 配置<br>
 在 _config.yml 中为博客的主要配置, 包括博客名称,logo,显示样式,个人信息的配置..eg.
 <br>不同的模板会有不同的配置, 提供的功能也不一样. 请根据具体的模板来配置.
 ## 发表文章
-* 在 _posts 目录下创建 .md 结尾的文件,文件名称以时间日期开始.例如:2018-08-13-create-github-pages.md <br>
+### 创建文件
+   在 _posts 目录下创建 .md 结尾的文件,文件名称以时间日期开始.例如:2018-08-13-create-github-pages.md <br>
    打开文件,开头加入如下内容. 
 ```
     ---
@@ -45,8 +46,10 @@ tags:文章的标签<br>
 author:作者<br>
 description:文章简要描述<br>
 
-* push 更改到 github
+正文直接使用 markdown 愉快的编写
+
+### push 更改到 github
 
 ## 访问
-博客的地址是 github.io 前加上个人账号这样的一个二级域名<br>
-我的博客地址是: [https://zhangkangen.github.io](https://zhangkangen.github.io)
+博客的地址是 **github.io** 前加上个人账号组成的一个二级域名<br>
+我的账号是**zhangkangen**, 那么我的博客地址是: [https://zhangkangen.github.io](https://zhangkangen.github.io)

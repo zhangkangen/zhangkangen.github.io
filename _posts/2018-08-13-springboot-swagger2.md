@@ -33,13 +33,13 @@ springboot 项目启动类加上 **@EnableSwagger2** 注解.
 4. 
 
 ##注意
-* springboot 中如果使用了自定义拦截器,这需要在拦截器中排出一下链接: "/swagger-resources/**"
-* springboot 集成 shiro 框架时,需要放行以下链接
+- springboot 中如果使用了自定义拦截器,这需要在拦截器中排出一下链接: "/swagger-resources/**"
+- springboot 集成 shiro 框架时,需要放行以下链接
 ```
     filterChainDefainitionMap.put("/swagger-ui.html", "anon");
     filterChainDefainitionMap.put("/swagger-resources", "anon");
     filterChainDefainitionMap.put("/v2/api-docs", "anon");
     filterChainDefainitionMap.put("/webjars/springfox-swagger-ui/**", "anon");
 ```
-* 集成 swagger2 会导致项目启动变慢, springboot 多分支开发时, 线上分支可以选择停用, 来减少项目发布时间.
+- 集成 swagger2 会导致项目启动变慢, springboot 多分支开发时, 线上分支可以选择停用, 来减少项目发布时间.
 
