@@ -31,7 +31,7 @@ paginate: 20
 title : zhangkangen's blog
 tagline: 我的技术博客
 assets: /assets
-url:
+url: https://zhangkagnen.github.io
 baseurl:
 
 #### Language
