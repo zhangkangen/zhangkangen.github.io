@@ -4,6 +4,7 @@ title: 创建github pages
 date: 2018-08-13 13:40:22
 categories: Other
 tags: Other
+description: github + jekyll + markdown 搭建自己的博客页面
 ---
 
 # 在 github 上搭建自己的博客
