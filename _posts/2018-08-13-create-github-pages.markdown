@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "创建github pages"
+title: 创建github pages
 categories: Other
 tags: Other
 author: zhangkangen
