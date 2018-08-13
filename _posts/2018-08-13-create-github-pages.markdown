@@ -4,14 +4,16 @@ title: 创建github pages
 categories: Other
 tags: Other
 author: zhangkangen
-description:github + jekyll + markdown 搭建自己的github pages.
 ---
 
-在 github 上搭建自己的博客
---
+github + jekyll + markdown 搭建自己的github pages.
 
-创建项目
 ---
+
+# 在 github 上搭建自己的博客
+
+## 创建项目
+
 
 导入 jekyll 模板
 ---
