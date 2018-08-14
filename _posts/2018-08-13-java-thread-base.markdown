@@ -23,5 +23,17 @@ currentThread() 方法可返回代码段正在被那个线程调用的信息。
 - 使用退出标识，使线程正常退出，也就是当 run 方法完成之后线程终止。
 - 使用 stop 方法强制终止，但是不推荐使用这个方法，因为 stop 和 suspend 及 resume 一样，都是过期作废的方法，使用它们可能产生不可预测的结果。
 - 使用 interrupt 方法中断线程。（仅仅是在当前线程中打了一个停止的标记，并不是真正的停止线程）
+## 对象及变量的并发访问
+### synchronized 同步方法
+### synchronized 同步语句块
+### volatile 关键字
+volatile 的作用是强制从公共堆栈中取得变量的值, 而不是从线程私有数据栈中取得变量的值.
 
+### volatile 和 synchronized 比较
+- volatile 是线程同步的轻量级实现, volatile 性能比 synchronized 好, volatile 只能修饰变量, synchronized 可以修饰方法, 以及代码块.
+- 多线程访问 volatile 不会发生阻塞, 而 synchronized 会出现阻塞.
+- volatile 能保证数据的可见性, 但不能保证原子性; 而 synchronized 可以保证原子性, 也可以间接保证可见性, 因为他会将私有内存和公共内存中的数据做同步.
+- volatile 解决的是变量在多个线程之间的可见性, 而 synchronized 解决的是多个线程之间访问资源的同步性.
+## 其它
+- 当一个线程执行的代码出现异常时, 该线程所持有的锁自动释放.
 
