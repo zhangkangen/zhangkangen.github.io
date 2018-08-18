@@ -14,6 +14,7 @@ description: 使用springboot 框架开发 web 项目中,在使用的 thymeleaf 
 springboot 默认支持多语言
 
 ## thymeleaf
+
 ## freemarker
 
 

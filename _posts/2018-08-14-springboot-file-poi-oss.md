@@ -24,6 +24,30 @@ Java 中使用 POI 是常用的一种操作 excel 的工具库. 在 office 中, 
 HSSF － 提供读写Microsoft Excel格式档案的功能。
 XSSF － 提供读写Microsoft Excel OOXML格式档案的功能。
 ```
+pom.xml 引入以下包.
+```
+    <dependency>
+        <groupId>org.apache.poi</groupId>
+        <artifactId>poi</artifactId>
+        <version>3.14</version>
+    </dependency>
+    <dependency>
+        <groupId>org.apache.poi</groupId>
+        <artifactId>poi-ooxml</artifactId>
+        <version>3.14</version>
+    </dependency>
+```    
+ Workbook(工作薄): 一个文件就是一个工作薄
+<br> Sheet(工作表): 表示一个表格. 一个工作薄中可以有多个工作表
+<br> Row(行): 
+<br> Cell(单元格): 数据存储单元, 单元格有不同的类型,用枚举 CellType 表示.
+- _NONE: Unknown type, used to represent a state prior to initialization or the lack of a concrete type.
+- BLANK: Blank cell type
+- BOOLEAN: Boolean cell type
+- ERROR: Error cell type
+- FORMULA: Formula cell type.(公式)
+- NUMERIC: Numeric cell type (whole numbers, fractional numbers, dates).(小数,整数,日期)
+- STRING: String (text) cell type.(字符串)
 ### Excel 导入
 
 读取 excel 可以使用 WorkbookFactory 来创建.
@@ -36,6 +60,7 @@ XSSF － 提供读写Microsoft Excel OOXML格式档案的功能。
 ## 使用阿里云的对象存储功能
 
 ## 使用七牛云的对象存储功能
+
 
 
 **示例与源码: []()**
