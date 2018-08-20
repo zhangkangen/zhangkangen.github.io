@@ -41,7 +41,8 @@ springboot 项目启动类加上 **@EnableSwagger2** 注解.
     filterChainDefainitionMap.put("/v2/api-docs", "anon");
     filterChainDefainitionMap.put("/webjars/springfox-swagger-ui/**", "anon");
 ```
-- 集成 swagger2 会导致项目启动变慢, springboot 多分支开发时, 线上分支可以选择停用, 来减少项目发布时间.
+- 集成 swagger2 会导致项目启动变慢, springboot 多分支开发时, 线上分支可以选择停用, 来减少项目发布时间,
+避免不必要的漏洞暴露。
 
 
 **未完待续...**
