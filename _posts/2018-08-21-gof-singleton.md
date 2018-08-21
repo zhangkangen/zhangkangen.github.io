@@ -3,7 +3,7 @@ layout: post
 title: 设计模式（一）：单例模式
 date: 2018-8-21 11:45:34
 categories: 
-- 设计模式
+- design pattern
 tags:
 - gof
 description: 系统性的总结设计模式的应用
