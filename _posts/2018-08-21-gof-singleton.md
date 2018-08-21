@@ -1,7 +1,7 @@
 ---
 layout: post
-title: 设计模式（一）: 单例模式
-date: 2018-08-21 10:23:21
+title: 设计模式（一）：单例模式
+date: 2018-8-21 11:45:34
 categories: 
 - 设计模式
 tags:
@@ -33,16 +33,16 @@ public class Singleton {
 懒汉模式代码：
 ```
 public class Singleton {
-        private static Singleton _instance = null;
-        private Singleton(){}
+    private static Singleton _instance = null;
+    private Singleton(){}
 
-        synchronized public static Singleton getInstance() {
-            if (_instance == null) {
-                _instance = new Singleton();
-            }
-            return _instance;
+    synchronized public static Singleton getInstance() {
+        if (_instance == null) {
+            _instance = new Singleton();
         }
+        return _instance;
     }
+}
 ```
 
 
