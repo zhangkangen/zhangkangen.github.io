@@ -40,6 +40,17 @@ volatile 只能修饰变量, synchronized 可以修饰方法, 以及代码块.
 也可以间接保证可见性, 因为他会将私有内存和公共内存中的数据做同步.
 - volatile 解决的是变量在多个线程之间的可见性, 而 synchronized 解决的是多个线程之间访问资源的同步性.
 ## 锁
+- ReentrantLock:
+- ReentrantReadWriteLock: 读写锁表示有两个锁，一个是读操作相关的锁，也称为共享锁；另一个是写操作
+相关的锁，也叫排他锁。多个读锁之间不互斥，读锁与写锁互斥，写锁与写锁互斥。
+
+### 锁优化
+- 减少锁持有时间
+- 减小锁粒度
+- 读写分离锁替换独占锁
+- 锁分离
+- 锁粗化
+
 ## 死锁
 ## 线程池
 线程是一种轻量级的工具，但其创建和关闭依然需要花费时间。
@@ -74,9 +85,29 @@ ThreadPoolExecutor:
 
 线程池数量设置：Nthreds = Ncpu * Ucpu * (1+ W/C)
 
-## 并发集合
-## ThreadLocal
+### Fork/Join 框架
+ForkJoinPool 线程池
+ForkJoinPool 中使用 ForkJoinTask。
 
+ForkJoinTask 有两个之类：
+- RecursiveAction 没有返回值
+- RecursiveTask 有返回值
+
+ ForkJoin 线程池使用一个无锁的栈来管理空闲线程。
+
+## 并发集合
+- ConcurrentHashMap: 线程安全的 HashMap
+- CopyOnWriteArrayList: 在读多写少的场景下，性能比较好
+- ConcurrentLinkedQueue: 高效的并发队列，使用链表实现
+- BlockingQueue: 表示阻塞队列，非常适合用于作为数据共享的通道。
+    - ArrayBlockingQueue: 基于数组实现，适合做有界队列。
+    - LinkedBlockingQueue: 基于链表，适合做无界队列。
+    
+    offer()、put(): 队列满offer()返回false，put()会一直等待。
+    poll()、take(): 队列空poll()返回null，take()会一直等待。
+- ConcurrentSkipListMap: 跳表的实现。这是一个Map，使用跳表的数据结构进行快速查找。
+## ThreadLocal
+ThreadLocal 每个线程绑定自己的值。
 ## 其它
 - 当一个线程执行的代码出现异常时, 该线程所持有的锁自动释放.
 
