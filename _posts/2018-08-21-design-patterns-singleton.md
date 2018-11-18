@@ -45,6 +45,57 @@ public class Singleton {
 }
 ```
 
+- DCL 双检查锁机制
+```
+public class MyObject{
+    private volatile static MyObject myObject;
+    private MyObject(){
+    }
+    public static MyObject getInstance(){
+        try{
+            synchorized(MyObject.class){
+                if(myObject==null){
+                    myObject = new MyObject();
+                }
+            }
+        } catch(InterruptedException e){
+            e.printStackTrace();
+        }
+        return myObject();
+    }
+}
+```
+- 静态内置类
+```
+public class MyObject{
+    private static class MyObjectHandler{
+        private static MyObject myObject = new MyObject();
+    }
+    
+    private MyObject(){
+    }
+    public static MyObject getInstance(){
+        return MyObjectHandler.myObject;
+    }
+}
+```
+- 静态代码块
+```
+public class MyObject{
+    private static MyObject instance = null;
+    private MyObject(){
+    }
+    static{
+        instance = new MyObject();
+    }
+    public static MyObject getInstance(){
+        return instance;
+    }
+}
+```
+
+- 使用enum枚举数据类型
+
 
 
 
