@@ -65,6 +65,7 @@ public class MyObject{
     }
 }
 ```
+
 - 静态内置类
 ```
 public class MyObject{
@@ -79,6 +80,7 @@ public class MyObject{
     }
 }
 ```
+
 - 静态代码块
 ```
 public class MyObject{
